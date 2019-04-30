@@ -14,22 +14,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstrap-css -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!--// bootstrap-css -->
 <!-- css -->
-<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../css/style.css" type="text/css" media="all" />
 <!--// css -->
 <!-- font-awesome icons -->
-<link href="css/font-awesome.css" rel="stylesheet">
+<link href="../css/font-awesome.css" rel="stylesheet">
 <!-- //font-awesome icons -->
 <!-- font -->
 <link href="//fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
 <link href="//fonts.googleapis.com/css?family=Dosis:300,400,500,600" rel="stylesheet">
 <!-- //font -->
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/bootstrap.js"></script>
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
+<script src="../js/jquery-1.11.1.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script type="text/javascript" src="../js/move-top.js"></script>
+<script type="text/javascript" src="../js/easing.js"></script>
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
 		$(".scroll").click(function(event){
@@ -39,8 +39,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	});
 </script>
 <!--animate-->
-<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
-<script src="js/wow.min.js"></script>
+<link href="../css/animate.css" rel="stylesheet" type="text/css" media="all">
+<script src="../js/wow.min.js"></script>
 	<script>
 		 new WOW().init();
 	</script>
@@ -78,7 +78,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="bottom-header">
 			<div class="container">
 				<div class="logo wow fadeInDown animated" data-wow-delay=".5s">
-					<h1><a href="index.html"><img src="images/logo.jpg" alt="" /></a></h1>
+					<h1><a href="index.html"><img src="../images/logo.jpg" alt="" /></a></h1>
 				</div>
 				<div class="top-nav wow fadeInRight animated" data-wow-delay=".5s">
 					<nav class="navbar navbar-default">
@@ -112,10 +112,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- //header -->
 	<!-- banner -->
 	<div class="banner">
-			<div class="slider">
+			<!-- <div class="slider">
 				<h2 class="wow shake animated" data-wow-delay=".5s">Triplex</h2>
 				<div class="border"></div>
-				<script src="js/responsiveslides.min.js"></script>
+				<script src="../js/responsiveslides.min.js"></script>
 				<script>
 						// You can also use "$(window).load(function() {"
 						$(function () {
@@ -166,12 +166,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</li>
 					</ul>
 				</div>
-			</div>
+			</div> -->
 	</div>
 	<!-- //banner -->
 	<!-- banner-bottom -->
 	<div class="banner-bottom w3layouts">
-		<div class="container">
+		<!-- <div class="container">
 			<div class="banner-bottom-grids agile-info">
 				<div class="col-md-6 banner-bottom-left wow fadeInLeft animated" data-wow-delay=".5s">
 					<div class="left-border">
@@ -190,12 +190,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="clearfix"> </div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 	<!-- //banner-bottom -->
 	<!-- information -->
 	<div class="information w3lagile">
-		<div class="container">
+		<!-- <div class="container">
 			<div class="information-heading">
 				<h3 class="wow fadeInDown animated" data-wow-delay=".5s">Our Services</h3>
 				<p class="wow fadeInUp animated" data-wow-delay=".5s">Vivamus efficitur scelerisque nulla nec lobortis. Nullam ornare metus vel dolor feugiat maximus.Aenean nec nunc et metus volutpat dapibus ac vitae ipsum. Pellentesque sed rhoncus nibh</p>
@@ -205,7 +205,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-4 information-grid wow fadeInLeft animated" data-wow-delay=".5s">
 					<div class="information-info">
 						<div class="information-grid-img">
-							<img src="images/8.jpg" alt="" />
+							<img src="../images/8.jpg" alt="" />
 						</div>
 						<div class="information-grid-info">
 							<h4>Sollicitudin sit amet </h4>
@@ -220,14 +220,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<p>Duis dapibus lacinia libero at aliquam. Sed pulvinar, magna vitae consectetur ultricies, augue massa condimentum eros non luctus ipsum lacus interdum odio.</p>
 						</div>
 						<div class="information-grid-img">
-							<img src="images/3.jpg" alt="" />
+							<img src="../images/3.jpg" alt="" />
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 information-grid wow fadeInRight animated" data-wow-delay=".5s">
 					<div class="information-info">
 						<div class="information-grid-img">
-							<img src="images/7.jpg" alt="" />
+							<img src="../images/7.jpg" alt="" />
 						</div>
 						<div class="information-grid-info">
 							<h4>Nullam ornare metus</h4>
@@ -237,13 +237,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="clearfix"> </div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 	<!-- //information -->
 
 	<!-- popular -->
 	<div class="popular agile-info">
-		<div class="container">
+		<!-- <div class="container">
 			<div class="popular-heading information-heading">
 				<h3 class="wow fadeInDown animated" data-wow-delay=".5s">Latest Designs</h3>
 				<p class="wow fadeInUp animated" data-wow-delay=".5s">Vivamus efficitur scelerisque nulla nec lobortis. Nullam ornare metus vel dolor feugiat maximus.Aenean nec nunc et metus volutpat dapibus ac vitae ipsum. Pellentesque sed rhoncus nibh</p>
@@ -306,7 +306,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="clearfix"> </div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 	<!-- //popular -->
 
