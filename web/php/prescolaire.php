@@ -195,6 +195,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- //banner-bottom -->
 	<!-- information -->
 	<div class="information w3lagile">
+    <h1>Hey</h1>
 		<!-- <div class="container">
 			<div class="information-heading">
 				<h3 class="wow fadeInDown animated" data-wow-delay=".5s">Our Services</h3>
