@@ -195,7 +195,43 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- //banner-bottom -->
 	<!-- information -->
 	<div class="information w3lagile">
-    <h1>Hey</h1>
+		<!-- Modal enregistrer cours -->
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  		Nouveau Cours
+    </button>
+
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">Entrez nouveau Cours</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+					<!-- formulaire -->
+					<form method="post" action="enregistrerCours.php">
+						<input type="text" name="typecours" value="prescolaire" placeholder="Titre du cours" hidden=""  >
+					  <div class="form-group">
+					    <label for="titrecours">Titre du cours</label>
+					    <input type="text" name="titrecours" class="form-control" id="titrecours" required=""  placeholder="Titre du cours">
+					  </div>
+						<div class="form-group">
+					    <label for="exampleFormControlTextarea1">Description du cours</label>
+					    <textarea class="form-control" id="exampleFormControlTextarea1" required="" rows="3"></textarea>
+					  </div>
+						<div class="form-group">
+					    <label for="exampleFormControlTextarea1">Prérequis</label>
+					    <textarea class="form-control" id="exampleFormControlTextarea1" required="" rows="3"></textarea>
+					  </div>
+
+					  <button type="submit" class="btn btn-primary">Enregistrer</button>
+					</form>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 		<!-- <div class="container">
 			<div class="information-heading">
 				<h3 class="wow fadeInDown animated" data-wow-delay=".5s">Our Services</h3>
