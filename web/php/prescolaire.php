@@ -211,19 +211,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	      </div>
 	      <div class="modal-body">
 					<!-- formulaire -->
-					<form method="post" action="enregistrerCours.php">
+					<form method="post" action="enregistrerCours.php" enctype="multipart/form-data">
 						<input type="text" name="typecours" value="prescolaire" placeholder="Titre du cours" hidden=""  >
 					  <div class="form-group">
 					    <label for="titrecours">Titre du cours</label>
 					    <input type="text" name="titrecours" class="form-control" id="titrecours" required=""  placeholder="Titre du cours">
 					  </div>
 						<div class="form-group">
-					    <label for="exampleFormControlTextarea1">Description du cours</label>
-					    <textarea class="form-control" id="exampleFormControlTextarea1" required="" rows="3"></textarea>
+					    <label for="description">Description du cours</label>
+					    <textarea class="form-control" name="description" id="description" required="" rows="3"></textarea>
 					  </div>
 						<div class="form-group">
-					    <label for="exampleFormControlTextarea1">Prérequis</label>
-					    <textarea class="form-control" id="exampleFormControlTextarea1" required="" rows="3"></textarea>
+					    <label for="prerequis">Prérequis</label>
+					    <textarea class="form-control" name="prerequis" id="prerequis" required="" rows="3"></textarea>
+					  </div>
+						<div class="form-group">
+					    <label for="exampleFormControlFile1">Choisir logo du cours</label>
+					    <input type="file" name="logocours" class="form-control-file" id="exampleFormControlFile1">
 					  </div>
 
 					  <button type="submit" class="btn btn-primary">Enregistrer</button>
