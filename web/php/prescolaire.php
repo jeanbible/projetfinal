@@ -58,8 +58,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="top-header-right wow fadeInRight animated" data-wow-delay=".5s">
 						<div class="top-header-right-info">
 							<ul>
-								<li><a href="login.html">Login</a></li>
-								<li><a href="signup.html">Sign up</a></li>
+								<li><a href="../login.html">Login</a></li>
+								<li><a href="../signup.html">Sign up</a></li>
 							</ul>
 						</div>
 						<div class="social-icons">
@@ -78,32 +78,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="bottom-header">
 			<div class="container">
 				<div class="logo wow fadeInDown animated" data-wow-delay=".5s">
-					<h1><a href="index.html"><img src="../images/logo.jpg" alt="" /></a></h1>
+					<h1><a href="../index.php"><img src="../images/logo.jpg" alt="" /></a></h1>
 				</div>
 				<div class="top-nav wow fadeInRight animated" data-wow-delay=".5s">
 					<nav class="navbar navbar-default">
-						<div class="container">
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Menu
-							</button>
-						</div>
-						<!-- Collect the nav links, forms, and other content for toggling -->
-						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-							<ul class="nav navbar-nav">
-								<li><a href="index.html" class="active">Home</a></li>
-								<li><a href="about.html">About</a></li>
-								<li><a href="codes.html">Codes</a></li>
-								<li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
-									<ul class="dropdown-menu">
-										<li><a class="hvr-bounce-to-bottom" href="gallery1.html">Gallery1</a></li>
-										<li><a class="hvr-bounce-to-bottom" href="gallery2.html">Gallery2</a></li>
-										<li><a class="hvr-bounce-to-bottom" href="icons.html">Font Icons</a></li>
-									</ul>
-								</li>
-								<li><a href="blog.html">Blog</a></li>
-								<li><a href="contact.html">Contact</a></li>
-							</ul>
-							<div class="clearfix"> </div>
-						</div>
+						<?php
+							require_once("../nav.html");
+					?>
 					</nav>
 				</div>
 			</div>
