@@ -26,11 +26,33 @@ function enregistrerCours(){
   unset($stmt);
   echo $message;
 }
+function listerCours(){
+	require_once("../db/connexion.inc.php");
+  $rep=array();
+	$requette="SELECT * FROM tabcours";
+	try{
+		 $stmt = $connexion->prepare($requette);
+		 $stmt->execute();
+		 while($ligne=$stmt->fetch(PDO::FETCH_OBJ)){
+			 $rep[]=$ligne;
+		 }
+	 }catch (Exception $e){
+	   $rep['erreur']="Probleme pour lister";
+	 }finally {
+		unset($connexion);
+		unset($stmt);
+		echo json_encode($rep);
+	 }
+}
+
 //controleur Admin
 $action=$_POST['action'];
 switch($action){
 	case 'enregCours':
 		enregistrerCours();
+	break;
+  case 'listerCours':
+		listerCours();
 	break;
 }
 ?>
