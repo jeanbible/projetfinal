@@ -27,9 +27,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="//fonts.googleapis.com/css?family=Dosis:300,400,500,600" rel="stylesheet">
 <!-- //font -->
 <script src="../js/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="../requetes/requetesAdmin.js">
+<script type="text/javascript" src="../requetes/requetesAdmin.js"></script>
+<script type="text/javascript" src="../vues/vues.js"></script>
 
-</script>
+
 <script src="../js/bootstrap.js"></script>
 <script type="text/javascript" src="../js/move-top.js"></script>
 <script type="text/javascript" src="../js/easing.js"></script>
@@ -199,10 +200,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- information -->
 	<div class="information w3lagile">
 		<!-- Modal enregistrer cours -->
+		<div id="contenu">
 
-		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  		Nouveau Cours
-    </button>
+		</div>
+		<button type="button" onclick="requetes('listerCours')" class="btn btn-primary">Lister cours</button>
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Nouveau Cours</button>
+
+
 
 		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	  <div class="modal-dialog" role="document">
