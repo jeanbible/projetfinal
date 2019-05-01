@@ -27,6 +27,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="//fonts.googleapis.com/css?family=Dosis:300,400,500,600" rel="stylesheet">
 <!-- //font -->
 <script src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../requetes/requetesAdmin.js">
+
+</script>
 <script src="../js/bootstrap.js"></script>
 <script type="text/javascript" src="../js/move-top.js"></script>
 <script type="text/javascript" src="../js/easing.js"></script>
@@ -196,6 +199,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- information -->
 	<div class="information w3lagile">
 		<!-- Modal enregistrer cours -->
+
 		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   		Nouveau Cours
     </button>
@@ -230,13 +234,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					    <input type="file" name="logocours" class="form-control-file" id="exampleFormControlFile1">
 					  </div>
 
-					  <button type="submit" class="btn btn-primary">Enregistrer</button>
+					  <button type="button" onclick="requetes('enregistrerCours')" class="btn btn-primary">Enregistrer</button>
 					</form>
 	      </div>
 	    </div>
 	  </div>
 	</div>
-    <h1>Hey</h1>
+
 		<!-- <div class="container">
 			<div class="information-heading">
 				<h3 class="wow fadeInDown animated" data-wow-delay=".5s">Our Services</h3>
