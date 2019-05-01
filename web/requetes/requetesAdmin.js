@@ -21,11 +21,32 @@ function enregistrerCours(){
 		}
 	});
 }
+function listerCours(){
+	$.ajax({
+		url:'controleurAdmin.php',
+		type:'POST',
+		data:{"action":'listerCours'},
+		dataType:'json',
+		success: function(listerCours){
+			// alert(listerCours);
+			// alert(JSON.stringify(listerCours));
+			vue('afficherCours',listerCours);
+		},
+		fail:function(){
+			alert("Vous avez un GROS problème");
+		}
+	});
+}
+
+
 //controleur des requetes
 var requetes=function(action){
 switch(action){
 	case 'enregistrerCours' :
 		enregistrerCours();
+	break;
+	case 'listerCours' :
+		listerCours();
 	break;
 	default :
 }
