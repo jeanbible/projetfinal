@@ -211,7 +211,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	      </div>
 	      <div class="modal-body">
 					<!-- formulaire -->
-					<form method="post" action="enregistrerCours.php" enctype="multipart/form-data">
+					<form method="post" action="enregistrerCours.php" id="enregCours" enctype="multipart/form-data">
 						<input type="text" name="typecours" value="prescolaire" placeholder="Titre du cours" hidden=""  >
 					  <div class="form-group">
 					    <label for="titrecours">Titre du cours</label>
