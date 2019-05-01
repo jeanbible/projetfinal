@@ -1,20 +1,20 @@
 function enregistrerCours(){
 	var enregCours = new FormData(document.getElementById('enregCours'));
-	enregCours.append('action','enregistrer');
+	enregCours.append('action','enregCours');
 	$.ajax({
-		url:'../php/controleurAdmin.php',
+		url:'controleurAdmin.php',
 		type:'POST',
 		data:enregCours,
-		dataType:'json',
+		dataType:'text',
 		async : false,
 		cache : false,
 		contentType : false,
 		processData : false,
 		success: function(message){
-			//alert(message);
+			alert(message);
 			//vue('enregistrer',message);
 			//vue('enregistrerJSON',message);
-			vue('enregistrerXML',message);
+			// vue('enregistrerXML',message);
 		},
 		fail:function(){
 			alert("Vous avez un GROS problème");
