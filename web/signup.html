@@ -119,17 +119,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<h1>Sign up</h1>
 				</div>
 				<div class="login-info">
-					<form action="#" method="post">
-						<input type="text" class="user" name="nom" placeholder="Nom" required="">
-						<input type="text" class="user" name="prenom" placeholder="Prenom" required="">
-						Sexe:<br>
-						<input type="radio" name="sexe" value="M">Homme<br>
-						<input type="radio" name="sexe" value="F">Femme
-						<input type="text" class="user" name="mail" placeholder="Email" required="">
-						<input type="submit" name="Sign In" value="Sign up">
-						<div class="signup-text">
-							<a href="login.html">Already have an account? Login here.</a>
-						</div>
+					<form>
+						<div class="form-group">
+					    <label for="nom">Nom</label>
+					    <input type="text" name="nom" class="form-control" id="nom" required=""  placeholder="Nom">
+					  </div>
+						<div class="form-group">
+					    <label for="nom">Prenom</label>
+					    <input type="text" name="prenom" class="form-control" id="prenom" required=""  placeholder="Prenom">
+					  </div>
+					  <div class="form-group">
+					    <label for="exampleFormControlInput1">Email address</label>
+					    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+					  </div>
 					</form>
 				</div>
 			</div>
