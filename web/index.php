@@ -100,7 +100,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</li>
 								<li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Activités Récréatives<span class="caret"></span></a>
 									<ul class="dropdown-menu">
-										<li><a class="hvr-bounce-to-bottom" href="prescolaire.php">Préscolaire</a></li>
+										<li><a class="hvr-bounce-to-bottom" href="php/prescolaire.php">Préscolaire</a></li>
 										<li class="dropdown-submenu">
         							<a class="test" tabindex="-1" href="#">Enfant <span class="caret"></span></a>
         							<ul class="dropdown-menu">
