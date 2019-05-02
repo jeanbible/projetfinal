@@ -4,6 +4,9 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+<?php
+	require_once("../db/connexion.inc.php");
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,6 +18,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstrap-css -->
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="../css/styleAjoute.css">
 <!--// bootstrap-css -->
 <!-- css -->
 <link rel="stylesheet" href="../css/style.css" type="text/css" media="all" />
@@ -115,7 +119,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<!-- //header -->
 	<!-- banner -->
-	<div class="banner">
+	<!-- <div class="banner"> -->
 			<!-- <div class="slider">
 				<h2 class="wow shake animated" data-wow-delay=".5s">Triplex</h2>
 				<div class="border"></div>
@@ -171,10 +175,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</ul>
 				</div>
 			</div> -->
-	</div>
+	<!-- </div> -->
 	<!-- //banner -->
 	<!-- banner-bottom -->
-	<div class="banner-bottom w3layouts">
+	<!-- <div class="banner-bottom w3layouts"> -->
 		<!-- <div class="container">
 			<div class="banner-bottom-grids agile-info">
 				<div class="col-md-6 banner-bottom-left wow fadeInLeft animated" data-wow-delay=".5s">
@@ -195,14 +199,45 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="clearfix"> </div>
 			</div>
 		</div> -->
-	</div>
+	<!-- </div> -->
 	<!-- //banner-bottom -->
 	<!-- information -->
-	<div class="information w3lagile">
+	<!-- <div class="information w3lagile"> -->
 		<!-- Modal enregistrer cours -->
 		<div id="contenu">
 
 		</div>
+		<!-- affichage Cours -->
+		<?php
+		$rep="";
+		// $rep="<table border=1>";
+		// $rep.="<caption>Liste des films</caption>";
+		// $rep.="<tr><th>Id</th><th>Titre</th><th>Description</th><th>Prérequis</th><th>Type</th><th>Logo</th></tr>";
+		$requette="SELECT * FROM tabcours";
+		try{
+			 $stmt = $connexion->prepare($requette);
+			 $stmt->execute();
+			 while($ligne=$stmt->fetch(PDO::FETCH_OBJ)){
+				 $rep.="<div class='prescolaire'>";
+		     $rep.="  <div>";
+		     $rep.="    <img src='../uploads/".($ligne->logocours)."' width=80 height=80>";
+		     $rep.="  </div>";
+		     $rep.="  <div >";
+		     $rep.="    <h2>".($ligne->titrecours)."</h2>";
+		     $rep.="    <p>".($ligne->descriptioncours)."</p>";
+		     $rep.="    <p>Prérequis:".($ligne->prerequiscours)."</p>";
+		     $rep.="  </div>";
+		     $rep.="</div>";
+			 }
+		 }catch (Exception $e){
+			 $rep['erreur']="Probleme pour lister";
+		 }finally {
+			 $rep.="</table>";
+			unset($connexion);
+			unset($stmt);
+			echo $rep;
+		 }
+		 ?>
 		<button type="button" onclick="requetes('listerCours')" class="btn btn-primary">Lister cours</button>
 		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Nouveau Cours</button>
 
@@ -288,7 +323,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="clearfix"> </div>
 			</div>
 		</div> -->
-	</div>
+	<!-- </div> -->
 	<!-- //information -->
 
 	<!-- popular -->
