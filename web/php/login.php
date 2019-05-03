@@ -34,4 +34,5 @@
            $_SESSION['type'] = ($ligne2->type);
 
       }
+      header ('location: ../index.php');
   ?>
