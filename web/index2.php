@@ -19,6 +19,7 @@
         // instance, using default configuration.
         CKEDITOR.replace( 'editor1', {
         //uiColor: '#AADC6E',
+        language: 'fr',
         height: 200,
         width: 500,
         toolbarGroups: ([
