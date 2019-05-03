@@ -10,7 +10,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <title>Around a Travel Category Flat Bootstrap responsive Website Template | Signup :: w3layouts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Around Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+<meta name="keywords" content="Around Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstrap-css -->
@@ -20,7 +20,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
 <!--// css -->
 <!-- font-awesome icons -->
-<link href="css/font-awesome.css" rel="stylesheet"> 
+<link href="css/font-awesome.css" rel="stylesheet">
 <!-- //font-awesome icons -->
 <!-- font -->
 <link href="//fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
@@ -32,12 +32,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="js/easing.js"></script>
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){		
+		$(".scroll").click(function(event){
 			event.preventDefault();
 			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 		});
 	});
-</script>	
+</script>
 <!--animate-->
 <link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
 <script src="js/wow.min.js"></script>
@@ -83,7 +83,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="top-nav wow fadeInRight animated" data-wow-delay=".5s">
 					<nav class="navbar navbar-default">
 						<div class="container">
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Menu						
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Menu
 							</button>
 						</div>
 						<!-- Collect the nav links, forms, and other content for toggling -->
@@ -95,22 +95,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
 									<ul class="dropdown-menu">
 										<li><a class="hvr-bounce-to-bottom" href="gallery1.html">Gallery1</a></li>
-										<li><a class="hvr-bounce-to-bottom" href="gallery2.html">Gallery2</a></li>  
-										<li><a class="hvr-bounce-to-bottom" href="icons.html">Font Icons</a></li> 
+										<li><a class="hvr-bounce-to-bottom" href="gallery2.html">Gallery2</a></li>
+										<li><a class="hvr-bounce-to-bottom" href="icons.html">Font Icons</a></li>
 									</ul>
-								</li>	
+								</li>
 								<li><a href="blog.html">Blog</a></li>
 								<li><a href="contact.html">Contact</a></li>
-							</ul>	
+							</ul>
 							<div class="clearfix"> </div>
-						</div>	
-					</nav>		
+						</div>
+					</nav>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- //header -->
-	
+
 	<!-- login -->
 	<div class="login">
 		<div class="container">
@@ -119,15 +119,46 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<h1>Sign up</h1>
 				</div>
 				<div class="login-info">
-					<form action="#" method="post">
-						<input type="text" class="user" name="email" placeholder="Name" required="">
-						<input type="text" class="user" name="email" placeholder="Email" required="">
-						<input type="password" name="password" class="lock" placeholder="Password">
-						<input type="password" name="password" class="lock" placeholder="Confirm Password">
-						<input type="submit" name="Sign In" value="Sign up">
-						<div class="signup-text">
-							<a href="login.html">Already have an account? Login here.</a>
+					<form>
+						<div class="form-group">
+					    <label for="nom">Nom</label>
+					    <input type="text" name="nom" class="form-control" id="nom" required=""  placeholder="Nom">
+					  </div>
+						<div class="form-group">
+					    <label for="prenom">Prenom</label>
+					    <input type="text" name="prenom" class="form-control" id="prenom" required=""  placeholder="Prenom">
+					  </div>
+						<label for="sexe">Sexe</label>
+						<div class="form-check">
+						  <input class="form-check-input" type="radio" name="sexe" id="homme" value="M" checked>
+						  <label class="form-check-label" for="homme">
+						    Homme
+						  </label>
 						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="radio" name="sexe" id="femme" value="F">
+						  <label class="form-check-label" for="femme">
+						    Femme
+						  </label>
+						</div><br>
+					  <div class="form-group">
+					    <label for="email">Email address</label>
+					    <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com">
+					  </div>
+						<div class="form-group">
+					    <label for="phone">Numéro de téléphone(###-###-####)</label>
+					    <input type="text" name="phone" class="form-control" id="phone" required=""  placeholder="Numéro de téléphone">
+					  </div>
+						<div class="form-group">
+					    <label for="date">Date de naissance</label>
+					    <input type="date" name="naissance" class="form-control" id="naissance" required="">
+					  </div>
+						<div class="form-group">
+					    <label for="paswrd">Mot de passe</label>
+					    <input type="password" name="paswd" class="form-control" id="paswd" placeholder="Mot de passe" required="">
+					  </div>
+						<button type="submit" class="btn btn-primary mb-2">Inscription</button>
+
 					</form>
 				</div>
 			</div>
@@ -176,5 +207,5 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 	<!-- //footer -->
-</body>	
+</body>
 </html>
