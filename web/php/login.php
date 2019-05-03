@@ -31,8 +31,7 @@
            }
            $_SESSION['prenom'] = ($ligne2->prenom);
            $_SESSION['idmem'] = ($ligne->idmem);
+           header ('location: ../index.php');
       }
-echo $_SESSION['prenom'];
-echo $_SESSION['idmem'] ;
 
   ?>
