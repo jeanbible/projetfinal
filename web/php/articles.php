@@ -139,12 +139,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 ?>
                 <div class="blog-left">
   								<div class="blog-left-left wow fadeInUp animated" data-wow-delay=".5s">
-  									<p>Écrit par <a href="#"><?php echo ($ligne2->prenom); ?></a> le <?php echo strftime('%d %B %Y à %H:%M', $postdate); ?> &nbsp;&nbsp; <a href="#">Commentaires (10)</a></p>
+  									<p>Écrit par <a href="#"><?php echo ($ligne2->prenom); ?></a> le <?php echo strftime('%d %B %Y à %H:%M', $postdate); ?> <a href="#">Commentaires (10)</a></p>
   									<a href="../single.html"><img src="../images/logo.jpg" alt="" /></a>
   								</div>
   								<div class="blog-left-right wow fadeInUp animated" data-wow-delay=".5s">
   									<a href="../single.html"><?php echo ($ligne->titre); ?></a>
-  									<?php echo ($ligne->content) ?>
+  									<p>
+                      <?php
+                        $sqlcontent = ($ligne->content);
+                        $out = strlen($sqlcontent) > 200 ? substr($sqlcontent,0,200)."..." : $sqlcontent;
+                        echo $out;
+                      ?>
+                    </p>
   								</div>
   								<div class="clearfix"> </div>
   							</div>
