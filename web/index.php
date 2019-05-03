@@ -4,6 +4,7 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -58,10 +59,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="top-header-right wow fadeInRight animated" data-wow-delay=".5s">
 						<div class="top-header-right-info">
-							<ul>
-								<li><a href="php/connexion.php">Connexion</a></li>
-								<li><a href="signup.html">Sign up</a></li>
-							</ul>
+							<?php
+								  require_once("php/loginNav.php");
+							 ?>
 						</div>
 						<div class="social-icons">
 							<ul>
