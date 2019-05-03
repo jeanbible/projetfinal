@@ -6,6 +6,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <?php
 	require_once("../db/connexion.inc.php");
+	session_start();
  ?>
 <!DOCTYPE html>
 <html>
@@ -65,10 +66,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="top-header-right wow fadeInRight animated" data-wow-delay=".5s">
 						<div class="top-header-right-info">
-							<ul>
-								<li><a href="../login.html">Login</a></li>
-								<li><a href="../signup.html">Sign up</a></li>
-							</ul>
+							<?php
+									require_once("loginNav.php");
+							 ?>
 						</div>
 						<div class="social-icons">
 							<ul>
