@@ -9,7 +9,7 @@
     </ul>
   <?php
     }
-    else if (isset($_SESSION['type']) == "M") {
+    else if ($_SESSION['type'] == "M") {
   ?>
       <ul>
       <li><a href="php/deconnexion.php">Deconnexion</a></li>
@@ -17,7 +17,7 @@
       </ul>
   <?php
     }
-    else if (isset($_SESSION['type']) == "A") {
+    else if ($_SESSION['type'] == "A") {
   ?>
       <ul>
         <li><a href="php/deconnexion.php">Deconnexion</a></li>
@@ -34,7 +34,7 @@
       </ul>
   <?php
     }
-    else if (isset($_SESSION['type']) == "M") {
+    else if ($_SESSION['type'] == "M") {
   ?>
       <ul>
         <li><a href="deconnexion.php">Deconnexion</a></li>
@@ -42,7 +42,7 @@
       </ul>
   <?php
     }
-    else if (isset($_SESSION['type']) == "A") {
+    else if ($_SESSION['type'] == "A") {
   ?>
       <ul>";
         <li><a href="deconnexion.php">Deconnexion</a></li>
