@@ -83,9 +83,64 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="top-nav wow fadeInRight animated" data-wow-delay=".5s">
 					<nav class="navbar navbar-default">
-						<?php
-							require_once("nav.html");
-						?>
+						<div class="container">
+						  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Menu
+						  </button>
+						</div>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						  <ul class="nav navbar-nav">
+						    <li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Le Club<span class="caret"></span></a>
+						      <ul class="dropdown-menu">
+						        <li><a class="hvr-bounce-to-bottom" href="php/missionobjectif.php">Mission et objectifs</a>
+						        <li><a class="hvr-bounce-to-bottom" href="php/conseiladmin.php">Conseil d’Administration</a></li>
+						        <li><a class="hvr-bounce-to-bottom" href="php/ameliorationcontinue.php">Amélioration continue</a></li>
+						        <li><a class="hvr-bounce-to-bottom" href="php/photos.php">Photos</a></li>
+						        <li><a class="hvr-bounce-to-bottom" href="php/politique.php">Politique</a></li>
+						      </ul>
+						    </li>
+						    <li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Activités Récréatives<span class="caret"></span></a>
+						      <ul class="dropdown-menu">
+						        <li><a class="hvr-bounce-to-bottom" href="php/prescolaire.php">Préscolaire</a></li>
+						        <li class="dropdown-submenu">
+						          <a class="test" tabindex="-1" href="#">Enfant <span class="caret"></span></a>
+						          <ul class="dropdown-menu">
+						            <li><a tabindex="-1" href="php/progcroixrouge.php">Programmation Croix Rouge</a></li>
+						            <li><a tabindex="-1" href="php/coursinitisyncronise.php">Cours initiation nage synchronisée</a></li>
+						            <li><a tabindex="-1" href="php/coursinitiplongeon.php">Cours initiation plongeon</a></li>
+						            <li><a tabindex="-1" href="php/coursaquaado.php">Cours aqua ado</a></li>
+						          </ul>
+						        </li>
+						        <li class="dropdown-submenu">
+						          <a class="test" tabindex="-1" href="#">Adulte <span class="caret"></span></a>
+						          <ul class="dropdown-menu">
+						            <li><a tabindex="-1" href="php/coursnatation.php">Cours Natation</a></li>
+						            <li><a tabindex="-1" href="php/coursmiseenforme.php">Mise en forme</a></li>
+						            <li><a tabindex="-1" href="php/coursinitiation.php">Cours d'initiation</a></li>
+						          </ul>
+						        </li>
+						      </ul>
+						    </li>
+						    <li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Activités Compétitives<span class="caret"></span></a>
+						      <ul class="dropdown-menu">
+						        <li><a class="hvr-bounce-to-bottom" href="#">Natation</a>
+						        <li><a class="hvr-bounce-to-bottom" href="#">Natation Artistique</a></li>
+						        <li><a class="hvr-bounce-to-bottom" href="#">Plongeon</a></li>
+						      </ul>
+						    </li>
+						    <li><a href="#">Camps de jour</a></li>
+						    <li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Formation Sauvetage<span class="caret"></span></a>
+						      <ul class="dropdown-menu">
+						        <li><a class="hvr-bounce-to-bottom" href="#">Devenir Sauveteur</a>
+						        <li><a class="hvr-bounce-to-bottom" href="#">Devenir Moniteur</a></li>
+						      </ul>
+						    </li>
+						    <li><a href="#">Contact</a></li>
+						    <li><a href="#">Connexion</a></li>
+						  </ul>
+						  <div class="clearfix"> </div>
+						</div>
+
 					</nav>
 				</div>
 			</div>
