@@ -30,8 +30,8 @@
             unset($stmt2);
            }
            $_SESSION['prenom'] = ($ligne2->prenom);
-           $_SESSION['idmem'] = ($ligne->idmem);
-           header ('location: ../index.php');
-      }
+           $_SESSION['idmem'] = ($ligne2->idmem);
+           $_SESSION['type'] = ($ligne2->type);
 
+      }
   ?>
