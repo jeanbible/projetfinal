@@ -126,20 +126,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <!-- L'ARTICLE -->
               <?php
 
-                $req = "SELECT * FROM tabarticles";
+                $req_allarticles = "SELECT * FROM tabarticles";
                 try{
-                 $stmt = $connexion->prepare($req);
+                 $stmt = $connexion->prepare($req_allarticles);
                  $stmt->execute();
                  while($ligne=$stmt->fetch(PDO::FETCH_OBJ)){
                   $postdate = strtotime(($ligne->postdate));
-                  $req2 = "SELECT * FROM tabmembres WHERE idmem=".($ligne->idmem);
-                  $stmt2 = $connexion->prepare($req2);
+                  $req_articlemem = "SELECT * FROM tabmembres WHERE idmem=".($ligne->idmem);
+                  $stmt2 = $connexion->prepare($req_articlemem);
                   $stmt2->execute();
                   $ligne2=$stmt2->fetch(PDO::FETCH_OBJ);
+
+									$req_articlecomments = "SELECT * FROM tabcommentaires WHERE idarticle=".($ligne->idarticle);
+									$stmt3 = $connexion->prepare($req_articlecomments);
+									$stmt3->execute();
+									$comments_count = $stmt3->rowCount();
                 ?>
                 <div class="blog-left">
   								<div class="blog-left-left wow fadeInUp animated" data-wow-delay=".5s">
-  									<p>Écrit par <a href="#"><?php echo ($ligne2->prenom); ?></a> le <?php echo strftime('%d %B %Y à %H:%M', $postdate); ?> <a href="#">Commentaires (10)</a></p>
+  									<p>Écrit par <a href="#"><?php echo ($ligne2->prenom); ?></a> le <?php echo strftime('%d %B %Y à %H:%M', $postdate); ?> <a href="#">Commentaires (<?php echo $comments_count; ?>)</a></p>
   									<a href="../single.html"><img src="../uploads/<?php echo ($ligne->photo); ?>" alt="" /></a>
   								</div>
   								<div class="blog-left-right wow fadeInUp animated" data-wow-delay=".5s">
@@ -165,7 +170,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
               ?>
               <!-- /L'ARTICLE -->
-									
+
 						</div>
 						<nav>
 							<ul class="pagination wow fadeInUp animated" data-wow-delay=".5s">
