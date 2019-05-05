@@ -117,7 +117,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="container">
 				<div class="blog-heading w3layouts">
 					<h2>Nouvelles</h2>
-					<p class="wow fadeInUp animated" data-wow-delay=".5s">Vivamus efficitur scelerisque nulla nec lobortis. Nullam ornare metus vel dolor feugiat maximus.Aenean nec nunc et metus volutpat dapibus ac vitae ipsum. Pellentesque sed rhoncus nibh</p>
+					<p class="wow fadeInUp animated" data-wow-delay=".5s"></p>
 				</div>
 				<div class="blog-top-grids">
           <!-- TOUS LES ARTICLES -->
@@ -140,15 +140,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="blog-left">
   								<div class="blog-left-left wow fadeInUp animated" data-wow-delay=".5s">
   									<p>Écrit par <a href="#"><?php echo ($ligne2->prenom); ?></a> le <?php echo strftime('%d %B %Y à %H:%M', $postdate); ?> <a href="#">Commentaires (10)</a></p>
-  									<a href="../single.html"><img src="../images/logo.jpg" alt="" /></a>
+  									<a href="../single.html"><img src="../uploads/<?php echo ($ligne->photo); ?>" alt="" /></a>
   								</div>
   								<div class="blog-left-right wow fadeInUp animated" data-wow-delay=".5s">
   									<a href="../single.html"><?php echo ($ligne->titre); ?></a>
   									<p>
                       <?php
                         $sqlcontent = ($ligne->content);
-                        $out = strlen($sqlcontent) > 200 ? substr($sqlcontent,0,200)."..." : $sqlcontent;
-                        echo $out;
+                        $content_preview = strlen($sqlcontent) > 200 ? substr($sqlcontent,0,200)."..." : $sqlcontent;
+                        echo $content_preview;
                       ?>
                     </p>
   								</div>
@@ -164,39 +164,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                  }
 
               ?>
-
               <!-- /L'ARTICLE -->
-							<div class="blog-left">
-								<div class="blog-left-left wow fadeInUp animated" data-wow-delay=".5s">
-									<p>Posted By <a href="#">Admin</a> &nbsp;&nbsp; on June 2, 2016 &nbsp;&nbsp; <a href="#">Comments (10)</a></p>
-									<a href="../single.html"><img src="../images/g3.jpg" alt="" /></a>
-								</div>
-								<div class="blog-left-right wow fadeInUp animated" data-wow-delay=".5s">
-									<a href="../single.html">Phasellus ultrices tellus eget ipsum ornare molestie</a>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed blandit massa vel mauris sollicitudin
-									dignissim. Phasellus ultrices tellus eget ipsum ornare molestie scelerisque eros dignissim. Phasellus
-									fringilla hendrerit lectus nec vehicula. ultrices tellus eget ipsum ornare consectetur adipiscing elit.Sed blandit .
-									estibulum aliquam neque nibh, sed accumsan nulla ornare sit amet.
-									</p>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-
-							<div class="blog-left">
-								<div class="blog-left-left wow fadeInUp animated" data-wow-delay=".5s">
-									<p>Posted By <a href="#">Admin</a> &nbsp;&nbsp; on June 2, 2016 &nbsp;&nbsp; <a href="#">Comments (10)</a></p>
-									<a href="../single.html"><img src="../images/g2.jpg" alt="" /></a>
-								</div>
-								<div class="blog-left-right wow fadeInUp animated" data-wow-delay=".5s">
-									<a href="../single.html">Phasellus ultrices tellus eget ipsum ornare molestie</a>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed blandit massa vel mauris sollicitudin
-									dignissim. Phasellus ultrices tellus eget ipsum ornare molestie scelerisque eros dignissim. Phasellus
-									fringilla hendrerit lectus nec vehicula. ultrices tellus eget ipsum ornare consectetur adipiscing elit.Sed blandit .
-									estibulum aliquam neque nibh, sed accumsan nulla ornare sit amet.
-									</p>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
+									
 						</div>
 						<nav>
 							<ul class="pagination wow fadeInUp animated" data-wow-delay=".5s">
