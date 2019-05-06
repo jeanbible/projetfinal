@@ -1,5 +1,5 @@
 <?php
-setlocale (LC_TIME, 'fr_FR.utf8','fra');
+	setlocale (LC_TIME, 'fr_FR.utf8','fra');
 	require_once("../db/connexion.inc.php");
  ?>
 <!DOCTYPE html>
@@ -126,16 +126,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <!-- L'ARTICLE -->
               <?php
 
-                $req_allarticles = "SELECT * FROM tabarticles";
+
                 try{
-                 $stmt = $connexion->prepare($req_allarticles);
-                 $stmt->execute();
-                 while($ligne=$stmt->fetch(PDO::FETCH_OBJ)){
-                  $postdate = strtotime(($ligne->postdate));
-                  $req_articlemem = "SELECT * FROM tabmembres WHERE idmem=".($ligne->idmem);
-                  $stmt2 = $connexion->prepare($req_articlemem);
-                  $stmt2->execute();
-                  $ligne2=$stmt2->fetch(PDO::FETCH_OBJ);
+									$req_allarticles = "SELECT * FROM tabarticles ORDER BY postdate DESC";
+									$stmt = $connexion->prepare($req_allarticles);
+									$stmt->execute();
+									while($ligne=$stmt->fetch(PDO::FETCH_OBJ)){
+									$postdate = strtotime(($ligne->postdate));
+									$req_articlemem = "SELECT * FROM tabmembres WHERE idmem=".($ligne->idmem);
+									$stmt2 = $connexion->prepare($req_articlemem);
+									$stmt2->execute();
+									$ligne2=$stmt2->fetch(PDO::FETCH_OBJ);
 
 									$req_articlecomments = "SELECT * FROM tabcommentaires WHERE idarticle=".($ligne->idarticle);
 									$stmt3 = $connexion->prepare($req_articlecomments);
@@ -144,11 +145,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 ?>
                 <div class="blog-left">
   								<div class="blog-left-left wow fadeInUp animated" data-wow-delay=".5s">
-  									<p>Écrit par <a href="#"><?php echo ($ligne2->prenom); ?></a> le <?php echo strftime('%d %B %Y à %H:%M', $postdate); ?> <a href="#">Commentaires (<?php echo $comments_count; ?>)</a></p>
+  									<p>Écrit par <a href="#"><?php echo ($ligne2->prenom)." ".($ligne2->nom); ?></a> le <?php echo strftime('%d %B %Y à %H:%M', $postdate); ?> <a href="#">Commentaires (<?php echo $comments_count; ?>)</a></p>
   									<a href="../single.html"><img src="../uploads/<?php echo ($ligne->photo); ?>" alt="" /></a>
   								</div>
   								<div class="blog-left-right wow fadeInUp animated" data-wow-delay=".5s">
-  									<a href="../single.html"><?php echo ($ligne->titre); ?></a>
+  									<a href="article_numero.php?id=<?php echo $ligne->idarticle; ?>"><?php echo ($ligne->titre); ?></a>
   									<p>
                       <?php
                         $sqlcontent = ($ligne->content);
