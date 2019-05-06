@@ -4,6 +4,25 @@
   margin-left: 90px;
   margin-right: 90px;
 }
+.blog-left-left a img {
+    width: 50%;
+}
+.single-left-left img {
+    width: 60%;
+}
+.titre-article {
+  font-size: 1.5em;
+  margin: .5em 0 .5em 0;
+  color: #353535;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+#logo_404 {
+  width: 50%;
+}
+#oups {
+  font-size: 5em;
+}
 #styleloginmodal{
   width: 200px;
 }

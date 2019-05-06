@@ -1,6 +1,11 @@
 <?php
+	setlocale (LC_TIME, 'fr_FR.utf8','fra');
 	require_once("../db/connexion.inc.php");
  ?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Club Aquatique Rosemont Petite-Patrie</title>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,6 +20,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--// bootstrap-css -->
 <!-- css -->
 <link rel="stylesheet" href="../css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../css/styleAjoute.css" type="text/css" media="all" />
 <!--// css -->
 <!-- font-awesome icons -->
 <link href="../css/font-awesome.css" rel="stylesheet">
@@ -114,6 +120,60 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="container">
 				<div class="blog-heading w3layouts">
 					<h2>Nouvelles</h2>
+					<p class="wow fadeInUp animated" data-wow-delay=".5s"></p>
+				</div>
+				<div class="blog-top-grids">
+          <!-- TOUS LES ARTICLES -->
+					<div class="col-md-8 blog-top-left-grid">
+						<div class="left-blog">
+              <!-- L'ARTICLE -->
+              <?php
+
+
+                try{
+									$req_allarticles = "SELECT * FROM tabarticles ORDER BY postdate DESC";
+									$stmt = $connexion->prepare($req_allarticles);
+									$stmt->execute();
+									while($ligne=$stmt->fetch(PDO::FETCH_OBJ)){
+									$postdate = strtotime(($ligne->postdate));
+									$req_articlemem = "SELECT * FROM tabmembres WHERE idmem=".($ligne->idmem);
+									$stmt2 = $connexion->prepare($req_articlemem);
+									$stmt2->execute();
+									$ligne2=$stmt2->fetch(PDO::FETCH_OBJ);
+
+									$req_articlecomments = "SELECT * FROM tabcommentaires WHERE idarticle=".($ligne->idarticle);
+									$stmt3 = $connexion->prepare($req_articlecomments);
+									$stmt3->execute();
+									$comments_count = $stmt3->rowCount();
+                ?>
+                <div class="blog-left">
+  								<div class="blog-left-left wow fadeInUp animated" data-wow-delay=".5s">
+  									<p>Écrit par <a href="#"><?php echo ($ligne2->prenom)." ".($ligne2->nom); ?></a> le <?php echo strftime('%d %B %Y à %H:%M', $postdate); ?> <a href="#">Commentaires (<?php echo $comments_count; ?>)</a></p>
+  									<a href="../single.html"><img src="../uploads/<?php echo ($ligne->photo); ?>" alt="" /></a>
+  								</div>
+  								<div class="blog-left-right wow fadeInUp animated" data-wow-delay=".5s">
+  									<a href="article_numero.php?id=<?php echo $ligne->idarticle; ?>"><?php echo ($ligne->titre); ?></a>
+  									<p>
+                      <?php
+                        $sqlcontent = ($ligne->content);
+                        $content_preview = strlen($sqlcontent) > 200 ? substr($sqlcontent,0,200)."..." : $sqlcontent;
+                        echo $content_preview;
+                      ?>
+                    </p>
+  								</div>
+  								<div class="clearfix"> </div>
+  							</div>
+                <?php
+                 }
+                }catch (Exception $e){
+                  echo "Problème pour lister.";
+                 }finally {
+                   unset($connexion);
+                   unset($stmt);
+                 }
+
+              ?>
+              <!-- /L'ARTICLE -->
 					<p class="wow fadeInUp animated" data-wow-delay=".5s">Vivamus efficitur scelerisque nulla nec lobortis. Nullam ornare metus vel dolor feugiat maximus.Aenean nec nunc et metus volutpat dapibus ac vitae ipsum. Pellentesque sed rhoncus nibh</p>
 				</div>
 				<div class="blog-top-grids">
@@ -186,6 +246,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</ul>
 						</nav>
 					</div>
+          <!-- /TOUS LES ARTICLES -->
 					<div class="col-md-4 blog-top-right-grid">
 						<div class="Categories wow fadeInUp animated" data-wow-delay=".5s">
 							<h3>Categories</h3>
