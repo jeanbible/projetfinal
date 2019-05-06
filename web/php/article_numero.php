@@ -126,9 +126,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									$stmt->execute();
 									$ligne=$stmt->fetch(PDO::FETCH_OBJ);
 									//SI L'ARTICLE N'EXISTE PAS
-									if ($ligne == null) {
-										echo "Ça existe pas";
-									}
+									if ($ligne == null) { ?>
+										<p id="oups">Oups !</p>
+										<p>La page que vous recherchez semble introuvable.</p>
+										<p>Code d'erreur : 404 </p>
+						<?php }
 									//SI L'ARTICLE EXISTE
 									else {
 										//Deuxième requête, obtenir les infos du membre qui a posté l'article
@@ -146,8 +148,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<!-- AFFICHAGE DE L'ARTICLE -->
 										<div class="blog-left">
 											<div class="single-left-left">
-												<p>Écrit par <a href="#"><?php echo ($ligne2->prenom)." ".($ligne2->nom); ?></a> le <?php echo strftime('%d %B %Y à %H:%M', $postdate); ?> <a href="#">Commentaires (<?php echo $comments_count; ?>)</a></p>
-												<a href="../single.html"><img src="../uploads/<?php echo ($ligne->photo); ?>" alt="" /></a>
+												<p>Écrit par <a href=""><?php echo ($ligne2->prenom)." ".($ligne2->nom); ?></a> le <?php echo strftime('%d %B %Y à %H:%M', $postdate); ?> <a href="#section_commentaires">Commentaires (<?php echo $comments_count; ?>)</a></p>
+												<img src="../uploads/<?php echo ($ligne->photo); ?>" alt="" />
 											</div>
 											<h1 class="titre-article"><?php echo ($ligne->titre); ?></h1>
 											<div class="blog-left-bottom">
@@ -166,7 +168,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										// SI L'ARTICLE A DES COMMENTAIRES, AFFICHER LA BOITE COMMENTAIRE
 										else { ?>
 											<div class="response wow fadeInUp animated" data-wow-delay=".5s">
-											<h3>Commentaires</h3>
+											<h3 id="section_commentaires">Commentaires</h3>
 							<?php	while($ligne3=$stmt3->fetch(PDO::FETCH_OBJ)){
 											$req_commentmem = "SELECT * FROM tabmembres WHERE idmem =($ligne3->idmem)";
 											$stmt4 = $connexion->prepare($req_commentmem);
