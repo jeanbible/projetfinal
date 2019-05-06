@@ -1,9 +1,3 @@
-<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,6 +12,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--// bootstrap-css -->
 <!-- css -->
 <link rel="stylesheet" href="../css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../css/styleAjoute.css" type="text/css" media="all" />
 <!--// css -->
 <!-- font-awesome icons -->
 <link href="../css/font-awesome.css" rel="stylesheet">
@@ -116,38 +111,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<div class="login-body">
 				<div class="login-heading w3layouts">
-					<h1>Login</h1>
+					<h1>Connexion</h1>
 				</div>
 				<div class="login-info">
 				<form action="login.php" method="post">
-						<input type="text" class="user" name="user" placeholder="Email" required="">
-						<input type="password" name="paswd" class="lock" placeholder="Password">
+						<input type="text" class="user" name="user" placeholder="Courriel" required="">
+						<input type="password" name="paswd" class="lock" placeholder="Mot de passe">
 						<div class="forgot-top-grids">
 							<div class="forgot-grid">
 								<ul>
 									<li>
 										<input type="checkbox" id="brand1" value="">
-										<label for="brand1"><span></span>Remember me</label>
+										<label for="brand1"><span></span>Se souvenir de moi</label>
 									</li>
 								</ul>
 							</div>
 							<div class="forgot">
-								<a href="#">Forgot password?</a>
+								<a href="#">Mot de passe oublié?</a>
 							</div>
 							<div class="clearfix"> </div>
 						</div>
-						<input type="submit" name="Sign In" value="Login">
+						<input type="submit" name="Sign In" value="Se connecter">
 						<div class="signup-text">
-							<a href="signup.html">Don't have an account? Create one now</a>
+							<a href="signup.html">Vous n'avez pas de compte? Créez-en un maintenant</a>
 						</div>
 						<hr>
-						<h2>or login with</h2>
+						<h2>ou se connecter avec</h2>
 						<div class="login-icons">
 							<ul>
 								<li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
-								<li><a href="#" class="dribbble"><i class="fa fa-dribbble"></i></a></li>
 							</ul>
 						</div>
 					</form>
