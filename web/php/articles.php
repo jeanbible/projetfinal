@@ -6,6 +6,10 @@
 <html lang="fr">
 <head>
 <title>Club Aquatique Rosemont Petite-Patrie</title>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Triplex a Interior Category Flat Bootstrap responsive Website Template | Blog :: w3layouts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Triplex Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
@@ -17,7 +21,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- css -->
 <link rel="stylesheet" href="../css/style.css" type="text/css" media="all" />
 <link rel="stylesheet" href="../css/styleAjoute.css" type="text/css" media="all" />
-
 <!--// css -->
 <!-- font-awesome icons -->
 <link href="../css/font-awesome.css" rel="stylesheet">
@@ -171,7 +174,57 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
               ?>
               <!-- /L'ARTICLE -->
+					<p class="wow fadeInUp animated" data-wow-delay=".5s">Vivamus efficitur scelerisque nulla nec lobortis. Nullam ornare metus vel dolor feugiat maximus.Aenean nec nunc et metus volutpat dapibus ac vitae ipsum. Pellentesque sed rhoncus nibh</p>
+				</div>
+				<div class="blog-top-grids">
+					<div class="col-md-8 blog-top-left-grid">
+						<div class="left-blog">
+							<div class="blog-left">
+								<div class="blog-left-left wow fadeInUp animated" data-wow-delay=".5s">
+									<p>Écrit par <a href="#">Admin</a> &nbsp;&nbsp; le 2 mai 2019 &nbsp;&nbsp; <a href="#">Commentaires (10)</a></p>
+									<a href="../single.html"><img src="../images/8.jpg" alt="" /></a>
+								</div>
+								<div class="blog-left-right wow fadeInUp animated" data-wow-delay=".5s">
+									<a href="../single.html">Phasellus ultrices tellus eget ipsum ornare molestie </a>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed blandit massa vel mauris sollicitudin
+									dignissim. Phasellus ultrices tellus eget ipsum ornare molestie scelerisque eros dignissim. Phasellus
+									fringilla hendrerit lectus nec vehicula. ultrices tellus eget ipsum ornare consectetur adipiscing elit.Sed blandit .
+									estibulum aliquam neque nibh, sed accumsan nulla ornare sit amet.
+								</p>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="blog-left">
+								<div class="blog-left-left wow fadeInUp animated" data-wow-delay=".5s">
+									<p>Posted By <a href="#">Admin</a> &nbsp;&nbsp; on June 2, 2016 &nbsp;&nbsp; <a href="#">Comments (10)</a></p>
+									<a href="../single.html"><img src="../images/g3.jpg" alt="" /></a>
+								</div>
+								<div class="blog-left-right wow fadeInUp animated" data-wow-delay=".5s">
+									<a href="../single.html">Phasellus ultrices tellus eget ipsum ornare molestie</a>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed blandit massa vel mauris sollicitudin
+									dignissim. Phasellus ultrices tellus eget ipsum ornare molestie scelerisque eros dignissim. Phasellus
+									fringilla hendrerit lectus nec vehicula. ultrices tellus eget ipsum ornare consectetur adipiscing elit.Sed blandit .
+									estibulum aliquam neque nibh, sed accumsan nulla ornare sit amet.
+									</p>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
 
+							<div class="blog-left">
+								<div class="blog-left-left wow fadeInUp animated" data-wow-delay=".5s">
+									<p>Posted By <a href="#">Admin</a> &nbsp;&nbsp; on June 2, 2016 &nbsp;&nbsp; <a href="#">Comments (10)</a></p>
+									<a href="../single.html"><img src="../images/g2.jpg" alt="" /></a>
+								</div>
+								<div class="blog-left-right wow fadeInUp animated" data-wow-delay=".5s">
+									<a href="../single.html">Phasellus ultrices tellus eget ipsum ornare molestie</a>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed blandit massa vel mauris sollicitudin
+									dignissim. Phasellus ultrices tellus eget ipsum ornare molestie scelerisque eros dignissim. Phasellus
+									fringilla hendrerit lectus nec vehicula. ultrices tellus eget ipsum ornare consectetur adipiscing elit.Sed blandit .
+									estibulum aliquam neque nibh, sed accumsan nulla ornare sit amet.
+									</p>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
 						</div>
 						<nav>
 							<ul class="pagination wow fadeInUp animated" data-wow-delay=".5s">
